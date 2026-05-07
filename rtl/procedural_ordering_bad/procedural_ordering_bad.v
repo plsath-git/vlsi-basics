@@ -1,6 +1,6 @@
 module procedural_ordering_bad
-  (output reg y_o
-   input a_i
+  (input a_i,
+   output reg y_o
    );
 
    reg 	 c_r;

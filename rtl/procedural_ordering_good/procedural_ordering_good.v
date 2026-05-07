@@ -1,17 +1,15 @@
 module procedural_ordering_good
-  (output reg y_o
-   input a_i,
+  (input a_i,
+   output reg y_o
    );
 
    reg 	 c_r;
-   reg 	 tmp;
 
    // Simulation issue fixed
    // Not synthesis issue. It will reduce to y_o = a_i;
    always_comb begin
-      tmp = a_i & c_r;
-      c_r = tmp | 1'b1;
-      y_o = tmp;
+      c_r = 1'b1;
+      y_o = a_i;
    end
 
 endmodule
